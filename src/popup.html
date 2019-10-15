@@ -10,11 +10,6 @@
         height: 465px;
         padding: 1rem;
       }
-      .top__row {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
       #close__popup {
         display: flex;
         justify-content: center;
@@ -23,10 +18,10 @@
         cursor: pointer;
         width: 36px;
         height: 36px;
+        transition: .2s box-shadow;
       }
       #close__popup:hover {
         box-shadow: -5px 5px 0px 0px cyan;
-        transition: .2s box-shadow;
       }
       .close__popup__inside {
         font-size: 30px;
@@ -60,33 +55,8 @@
         box-shadow: -5px 5px 0px 0px cyan;
         transition: .2s box-shadow;
       }
-      .wipePage-red {
-        box-shadow: -5px 5px 0px 0px red;
-      }
-      .wipePage:hover {
-        box-shadow: -5px 5px 0px 0px white;
-      }
-      .topRow {
-        border: 4px solid black;
-        width: 100%;
-      }
-      .meditation__row {
-        display: flex;
-        flex-direction: column;
-      }
-      .meditation__button {
-        display: inline-block;
-        border: 4px solid black;
-        cursor: pointer;
-        padding: 0.3rem;
-        color: black;
-        text-decoration: none;
-        margin-left: 0.6rem;
-        box-shadow: -5px 5px 0px 0px rgba(255,46,182,1);
-        transition: .2s box-shadow;
-      }
-      .meditation__button:hover {
-        box-shadow: -5px 5px 0px 0px white;
+      .heythere {
+        
       }
     </style>
   </head>
@@ -95,7 +65,7 @@
 
       <!-- TOP ROW -->
       <div class="top__row">
-        <h1>NeverFap Deluxe</h1>
+        <h1>Reddit Marketing App</h1>
         <div id="close__popup">
           <span class="close__popup__inside">x</span>
         </div>
@@ -107,40 +77,10 @@
       <div class="row" styl>
         <div class="module">
           <h2>Step 1.</h2>
-          <p>Wipe your webpage if it is NSFW.</p>
-          <a class="wipePage wipePage-red" id="wipePage">Wipe Page</a>
-        </div>
-
-        <div class="module">
-          <h2>Step 2.</h2>
-          <p>Visit the website and educate yourself.</p>
-          <a class="wipePage" href="https://neverfapdeluxe.com/" target="_blank">Website</a>
-        </div>
-
-        <div class="module">
-          <h2>Step 3.</h2>
-          <p>Chat with one of our helpers for FREE.</p>
-          <a class="wipePage" href="https://discord.gg/YETRkSj/" target="_blank">Discord Server</a>
         </div>
       </div>
 
       <hr/>
-
-      <!-- BOTTOM ROW -->
-      <div class="meditation__row">
-        <div class="meditation__title__row">
-          <h2 class="meditation__title">Meditation</h2>
-          <!-- <div id="previous__meditation__button" class="meditation__button wipePage previous__meditation__button">Previous Meditation</div>
-          <div id="next__meditation__button" class="meditation__button wipePage next__meditation__button">Next Meditation</div> -->
-        </div>
-        <!-- <h3 id="meditation__title__single"></h3>
-        <div class="module">
-          <audio id="meditation__audio__player" src="" controls />
-        </div> -->
-
-        <iframe src="https://castbox.fm/app/castbox/player/id2113294?v=8.0.190531&autoplay=0" frameborder="0" width="100%" height="400"></iframe>
-
-      </div>
 
     </div>
     <script src="popup.js"></script>

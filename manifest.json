@@ -1,12 +1,34 @@
 {
-  "name": "NeverFap Deluxe",
+  "name": "Reddit Marketing",
+  "short_name": "rm",
   "version": "1.0",
-  "description": "NeverFap Deluxe is a comprehensive porn addiction recovery process.",
+  "description": "Reddit Marketing",
   "permissions": ["activeTab", "declarativeContent", "storage"],
   "background": {
     "scripts": ["src/background.js"],
-    "persistent": false
+    "persistent": true
   },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "src/scripts/saveUsers.js", 
+        "src/scripts/tagUsers.js", 
+        
+        "src/automation/automaticallySendMessage.js"
+      ],
+      "css": [
+        "src/css/styles.css"
+      ],
+      "web_accessible_resources": [
+        "src/css/styles.css"
+      ],
+      "run_at": "document_start",
+      "all_frames" : true
+    }
+  ],
   "options_page": "src/options.html",
   "page_action": {
     "default_popup": "src/popup.html",

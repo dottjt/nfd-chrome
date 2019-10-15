@@ -1,18 +1,9 @@
-let wipePage = document.getElementById('wipePage');
-let close__popup = document.getElementById('close__popup');
+// window.onmouseover = function(e) {
+//   console.log(e.target.className);
+//   lastClassName = e.target.className;
+// };
 
-// let previous__meditation__button = document.getElementById('previous__meditation__button');
-// let next__meditation__button = document.getElementById('next__meditation__button');
-
-// let meditation__audio__player = document.getElementById('meditation__audio__player');;
-// let meditation__title__single = document.getElementById('meditation__title__single');;
-
-
-
-
-close__popup.onclick = function(element) {
-  window.close();
-};
+console.log('popup.js')
 
 // chrome.storage.sync.get('selectedMeditation', function (data) {
 //   setNewMeditation(data.selectedMeditation);
@@ -40,44 +31,44 @@ close__popup.onclick = function(element) {
 //   });
 // };
 
-wipePage.onclick = function(element) {
-  chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
-    chrome.tabs.executeScript(tabs[0].id, {
-      code: 'document.body.style.display = "none";',
-    });
-  });
-};
+// wipePage.onclick = function(element) {
+//   chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
+//     chrome.tabs.executeScript(tabs[0].id, {
+//       code: 'document.body.style.display = "none";',
+//     });
+//   });
+// };
 
-// function getNextMeditation(selectedMeditation, meditationList, movement) {
-//   const isFirstOrLast = selectedMeditation.position === 0 || meditationList.length === (selectedMeditation.position + 1) ? true : false;
-//   // the problem is that this is always true.
 
-//   const newPosition = selectedMeditation.position + movement;
-//   const validateNewPosition = newPosition < 0 || newPosition >= meditationList.length ? selectedMeditation.position : newPosition;
-//   const newMeditation = meditationList[validateNewPosition];
+// let lastClassName;
 
-//   chrome.storage.sync.set({ selectedMeditation: newMeditation }, function (data) {});
+// window.onmouseover = function(e) {
+//   console.log(e.target.className);
+//   lastClassName = e.target.className;
+// };
 
-//   return {
-//     isFirstOrLast,
-//     newMeditation,
-//   }
+
+// // neutralise all a links
+// const links = document.getElementsByTagName("a");
+// for (let i = 0; i < links.length; i++){
+//   links[i].addEventListener("click",function(e){
+//     e.preventDefault();
+//   });
 // }
 
-// function setNewMeditation(selectedMeditation) {
-//   const selectedMeditationUrl = selectedMeditation.mp3Url;
-//   const selectedMeditationTitle = selectedMeditation.title;
+// const produceRedditString = (to, subject, message) => `https://www.reddit.com/message/compose/?to=${to}&subject=${subject}&message=${message}`
 
-//   meditation__audio__player.src = selectedMeditationUrl;
-//   meditation__title__single.innerHTML = selectedMeditationTitle;
-
-//   meditation__audio__player.load();
-// }
-
-// function disappearOrAppearFirstAndLast(isFirstOrLast, component) {
-//   if (isFirstOrLast) {
-//     component.style.visibility = 'hidden';
-//   } else {
-//     component.style.visibility = 'visible';
-//   }
-// }
+// window.onclick = function(e) {
+//   navigator.clipboard.readText()
+//     .then(text => {
+//       console.log(produceRedditString(e.target.text, "Hey", encodeURI(text)))
+      
+//       window.open(
+//         produceRedditString(e.target.text, "Hey", text),
+//         '_blank' // <- This is what makes it open in a new window.
+//       );
+//     })
+//     .catch(err => {
+//       console.error('Failed to read clipboard contents: ', err);
+//     });
+// };
